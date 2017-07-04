@@ -1,0 +1,63 @@
+# ~/.tmuxinator/registers-pdf-changes.yml
+
+name: registers
+root: ~/doc/devel/soepc-registers
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t registers
+
+windows:
+  - domestic:
+      root: ~/doc/devel/soepc-registers/domestic
+      layout: main-horizontal
+      panes:
+          - #empty
+          - #empty
+          - #empty
+  - git:
+      layout: even-vertical
+      panes:
+        - #empty
+        - #empty
+  - test-logs:
+      layout: even-horizontal
+      panes:
+          - ssh dew-web1 -t "less /var/log/tomcat/catalina.out"
+          - ssh dew-web2 -t "less /var/log/tomcat/catalina.out"
+  - releases:
+      root: ~/doc/devel/epc-release-scripts
+      panes:
+        - #empty
+  - docs:
+      root: ~/doc/work/projects
+      panes:
+        - #empty
+        - #empty
+  - sandbox:
+      root: ~/doc/devel
+      layout: even-horizontal
+      panes:
+        - #empty
+        - #empty
+

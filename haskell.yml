@@ -1,0 +1,17 @@
+# ~/.tmuxinator/haskell.yml
+
+name: haskell
+root: ~/doc/devel/haskell-sandbox/app/programmingHaskell/chapter23
+
+windows:
+  - main:
+      layout: main-vertical
+      panes:
+        - vim notes.md
+        - vim examples.hs
+        - stack ghci
+  - scratch:
+      layout: main-vertical
+      panes:
+        - open notes.pdf && open ~/Dropbox/Library/Chris\ Allen/Haskell\ Programming\ from\ First\ Principles\ \(Screen\ Version\)\ \(157\)/Haskell\ Programming\ from\ First\ Principles\ -\ Chris\ Allen.pdf
+        - while true; do inotifywait -e CLOSE_WRITE .; pandoc -o notes.{pdf,md}; done

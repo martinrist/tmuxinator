@@ -1,0 +1,15 @@
+# ~/.tmuxinator/haskell.yml
+
+name: poker-puzzle
+root: ~/doc/devel/poker-puzzle/martin-haskell
+
+windows:
+  - main:
+      layout: main-vertical
+      panes:
+        - vim
+        - stack test --file-watch-poll
+        - stack ghci
+  - scratch:
+      panes:
+        - #empty
