@@ -51,6 +51,7 @@ windows:
         - #empty
   - docs:
       root: ~/doc/work/projects
+      layout: even-horizontal
       panes:
         - #empty
         - #empty
