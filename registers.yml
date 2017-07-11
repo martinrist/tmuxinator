@@ -28,8 +28,8 @@ root: ~/doc/devel/soepc-registers
 # post: tmux -CC attach -t registers
 
 windows:
-  - domestic:
-      root: ~/doc/devel/soepc-registers/domestic
+  - build:
+      root: ~/doc/devel/soepc-registers
       layout: main-horizontal
       panes:
           - #empty
