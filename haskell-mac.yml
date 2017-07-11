@@ -1,0 +1,17 @@
+# ~/.tmuxinator/haskell.yml
+
+name: haskell
+root: ~/doc/devel/haskell-sandbox/app/programmingHaskell/chapter24
+
+windows:
+  - main:
+      layout: main-vertical
+      panes:
+        - vim notes.md
+        - vim examples.hs
+        - stack ghci
+  - scratch:
+      layout: main-vertical
+      panes:
+        - #empty
+        - #empty
