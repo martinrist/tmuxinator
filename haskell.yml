@@ -1,7 +1,7 @@
 # ~/.tmuxinator/haskell.yml
 
 name: haskell
-root: ~/doc/devel/haskell-sandbox/app/programmingHaskell/chapter24
+root: ~/doc/devel/haskell-sandbox/app/programmingHaskell/chapter26
 
 windows:
   - main:
